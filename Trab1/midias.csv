@@ -1,0 +1,21 @@
+codigo;nome;tipo;diretor;a(u)tores;tamanho;genero;serie;temporada;possui;consumiu;deseja;preco
+1;Velozes e Furiosos;F;26;1,2,3,4;99;AV;;;;x;;9.99
+2; +Velozes  +Furiosos;F;27;1,2,3,4;103;AV;;;;x;;9.99
+3;Velozes e Furiosos: Desafio em Toquio;F;28;1,2,3,4;130;AV;;;x;x;;14.99
+4;Velozes e Furiosos 4;F;28;1,2,3,4;120;AC;;;;x;;17.57
+5;Velozes e Furiosos 5: Operaçao Rio;F;28;1,2,3,4,5;111;AC;;;;x;;0.01
+6;Velozes e Furiosos 6;F;28;1,2,3,4,5;113;AC;;;x;x;;19.99
+7;Velozes e Furiosos 7;F;29;1,2,3,4,5;145;AC;;;x;x;;29.99
+8;Os imperdoaveis;F;6;6,7,8,9;131;FO;;;x;x;;19.99
+9;O guia do mochileiro das galaxias - vol I;L;;10;204;CO;;;x;x;;19.99
+10;O guia do mochileiro das galaxias - vol II;L;;10;230;CO;;;x;x;;19.99
+11;O guia do mochileiro das galaxias - vol III;L;;10;221;CO;;;x;x;x;19.99
+12;O guia do mochileiro das galaxias - vol IV;L;;10;203;CO;;;x;;x;19.99
+13;O guia do mochileiro das galaxias - vol VI;L;;10;206;CO;;;;;x;19.99
+14;O guia do mochileiro das galaxias - vol VI;L;;11;368;FC;;;;;x;19.99
+15;Daredevil - 1 Temporada;S;;12,13,14,15,16,17,18;650;AC;Deredevil;1;;x;;19.99
+16;Justfield - 1 Temporada;S;;19,20,21,22,23,24,25;500;AC;Justfield;1;x;x;;40
+17;Justfield - 2 Temporada;S;;19,20,21,22,23,24,25;550;AC;Justfield;2;;;x;40.5
+18;Eurotrip;F;30;22;130;CO;;;x;;x;10
+19;Friends - 3 Temporada;S;;;480;CO;Friends;3;;x;;20
+20;Friends - 4 Temporada;S;;;477;CO;Friends;4;;x;;30

@@ -1,0 +1,86 @@
+
+package TrabalhoPROG3_2015_2;
+
+import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
+ 
+/**
+ *
+ * @author Favoreto
+ * 
+ */
+public class Leitura_m extends Leitura {
+    public Leitura_m(String arg) throws IOException{
+    
+        
+    File arq = new File(arg);
+    
+    String linha = "";
+    
+    String csvDivisor = ";";
+    
+    String[] frase;
+    
+        Scanner in = new Scanner(arq);
+    	in.nextLine();    
+  
+        while (in.hasNextLine()) {
+        
+            linha = in.nextLine();
+            frase = linha.split(csvDivisor);
+            
+            Integer Codigo,Tamanho,Temporada;
+            Character Possui,Consumiu,Deseja,Tipo;
+            
+            if (frase[frase.length-13].equals("")){
+                Codigo = null;
+            }
+            else
+                Codigo = Integer.parseInt(frase[frase.length-13]);
+            
+            if (frase[frase.length-8].equals("")){
+                Tamanho = null;
+            }
+            else
+                Tamanho = Integer.parseInt(frase[frase.length-8]);
+            
+            if (frase[frase.length-5].equals("")){
+                Temporada = null;
+            }
+            else
+                Temporada = Integer.parseInt(frase[frase.length-5]);
+            
+            if (frase[frase.length-4].length() < 1){
+                Possui = null;
+            }
+            else
+                Possui = frase[frase.length-4].charAt(0);
+            
+            if (frase[frase.length-3].length() < 1){
+                Consumiu = null;
+            }
+            else
+                Consumiu = frase[frase.length-3].charAt(0);
+            
+            if (frase[frase.length-2].length() < 1){
+                Deseja = null;
+            }
+            else
+                Deseja = frase[frase.length-2].charAt(0);
+            
+            if (frase[frase.length-11].length() < 1){
+                Tipo = null;
+            }
+            else
+                Tipo = (frase[frase.length-11]).charAt(0);
+            
+                Mídia m = new Mídia(Codigo,frase[frase.length-12],Tipo,(frase[frase.length-10]),
+                    (frase[frase.length-9]),Tamanho,frase[frase.length-7],frase[frase.length-6],Temporada,
+                    Possui,Consumiu,Deseja,frase[frase.length-1]);
+                
+                mídias.add(m);
+                códigos_mídias.put(Codigo, Codigo);
+        }
+    }
+}

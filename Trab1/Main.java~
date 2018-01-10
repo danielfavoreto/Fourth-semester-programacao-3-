@@ -1,0 +1,67 @@
+package TrabalhoPROG3_2015_2;
+
+import java.text.ParseException;
+import java.io.IOException;
+/**
+ *
+ * @author Favoreto
+ */
+
+public class Main {
+
+  public static void main(String[] args) {
+      
+      if (args.length != 1 && args.length != 8 && args.length != 9) {
+          System.out.println("Argumentos incorretos, tente novamente");
+          return;
+      }
+      
+      char c = 'n';
+       
+      int i;
+      
+      try { //mídia está com gênero (sigla)--mídia está com pessoas (código)--empréstimo está com mídia (código)
+      
+      	  for (i = 0; i < args.length;i++) {
+          
+          switch (args[i]) {
+              case "-g":
+                  i = i + 1;
+                  new Leitura_g(args[i]); //LEITURA GENEROS
+                  break;
+              case "-p":
+                  i = i + 1;
+                  new Leitura_p(args[i]); //LEITURA PESSOAS
+                  break;
+              case "-m":
+                  i = i + 1;
+                  new Leitura_m(args[i]); //LEITURA MIDIAS
+                  break;
+              case "-e":
+                  i = i + 1;
+                  new Leitura_e(args[i]); //LEITURA EMPRESTIMOS
+                  break;
+              case "--write-only":
+                  c = 'w';
+                  break;
+              case "--read-only":
+                  c = 'r';
+                  break;
+          	}
+	      }
+	new Executa(c); // EXECUTA TODAS AS FUNCIONALIDADES DO SISTEMA
+
+      
+      } catch (IOException | ClassNotFoundException | ParseException | Dados_inconsistentes e){ 
+      		if (e instanceof Dados_inconsistentes){
+			return;
+      		}
+      		if (e instanceof ParseException){
+      			System.err.println("Erro de formatação");
+      			return;
+      		}
+      		System.err.println("Erro de I/O");
+      		return;
+      }
+  }
+}
